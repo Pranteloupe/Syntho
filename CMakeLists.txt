@@ -3,7 +3,9 @@ project(Syntho)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(Syntho main.cpp)
+add_executable(Syntho src/main.cpp
+        src/Oscillator.cpp
+        include/Oscillator.h)
 
 set(CMAKE_CXX_CLANG_TIDY
         clang-tidy;
