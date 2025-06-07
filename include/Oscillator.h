@@ -9,8 +9,10 @@
 
 class Oscillator {
 public:
-    Oscillator(float freq, float amp, int sampleRate, int bitDepth);
-    int process();
+    Oscillator(float freq, float amp, int sampleRate);
+    float process();
+    void setFrequency(float freq);
+    float getFrequency() const;
     [[nodiscard]] int getSampleRate() const;
     [[nodiscard]] int getBitDepth() const;
 
@@ -20,8 +22,6 @@ private:
     float angle;
     float offset;
     int sampleRate;
-    int bitDepth;
-    double maxAmplitude;
 };
 
 
